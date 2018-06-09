@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import './putter.dart';
 import './list_page.dart';
 
 void main() => runApp(new MyApp());
 
-final _items = new List<String>.generate(100, (i) => 'Item $i');
+final _items = Putter.generate(100);
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

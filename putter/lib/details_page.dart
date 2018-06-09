@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-class DetailsPage extends StatelessWidget {
-  final String name;
+import './putter.dart';
 
-  DetailsPage({ @required this.name });
+class DetailsPage extends StatelessWidget {
+  final Putter item;
+
+  DetailsPage({ @required this.item });
 
   navigateToList(BuildContext context) {
     Navigator.pop(context);
@@ -14,7 +16,7 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       // This AppBar instance magically has a back button?
       appBar: AppBar(
-        title: Text(name),
+        title: Text(item.name),
       ),
       body: Container(
         child: Text('hi'),
