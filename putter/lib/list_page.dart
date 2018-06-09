@@ -26,25 +26,26 @@ class ListPage extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
+          var i = index * 2;
           var children = [
             Expanded(
               child:  ItemWidget(
-                item: items[index],
+                item: items[i],
                 onTap: () => this.navigateToDetails(
                   context,
-                  items[index].name,
+                  items[i],
                 ),
               ),
             ),
           ];
 
-          if (index + 1 <= items.length - 1) {
+          if (i + 1 <= items.length - 1) {
             children.add(Expanded(
               child: ItemWidget(
-                item: items[index + 1],
+                item: items[i + 1],
                 onTap: () => this.navigateToDetails(
                   context,
-                  items[index + 1].name
+                  items[i + 1]
                 ),
               )
             ));
