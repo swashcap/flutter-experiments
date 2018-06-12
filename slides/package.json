@@ -1,0 +1,22 @@
+{
+  "name": "flutter-experiments-slides",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "cleaver slides.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/swashcap/flutter-experiments.git"
+  },
+  "author": "Cory Reed <swashcap@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/swashcap/flutter-experiments/issues"
+  },
+  "homepage": "https://github.com/swashcap/flutter-experiments#readme",
+  "dependencies": {
+    "cleaver": "^0.8.7"
+  },
+  "private": true
+}
