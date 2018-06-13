@@ -67,6 +67,9 @@ class DetailsPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
+        onPressed: () {
+          print('Pressed!');
+        },
         tooltip: 'Add',
       ),
     );

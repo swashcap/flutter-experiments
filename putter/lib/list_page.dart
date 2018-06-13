@@ -22,7 +22,27 @@ class ListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Putter')
+        title: Text('Putter'),
+        actions: [
+          Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 80.0,
+                ),
+                Row(
+                  children: [
+                    Icon(Icons.shopping_cart),
+                    SizedBox(width: 10.0),
+                    Text(
+                      '0',
+                      style: TextStyle(fontWeight: FontWeight.bold)
+                    ),
+                  ]
+                )
+              ]
+          ),
+        ],
       ),
       body: ListView.builder(
         itemBuilder: (context, index) {
