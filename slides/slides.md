@@ -4,6 +4,7 @@ author:
   url: http://swashcap.com
   twitter: swashcap
   email: Cory.Reed@walmart.com
+style: styles.css
 output: slides.html
 
 --
@@ -282,3 +283,11 @@ All visuals are reimplemented in Dart:
 * [Dart language](https://www.dartlang.org)
 * Google's Flutter playlist: https://www.youtube.com/playlist?list=PLOU2XLYxmsIJ7dsVN4iRuA7BT8XHzGtCr
 * Material design and Flutter: https://material.io/collections/developer-tutorials/#flutter
+
+--
+
+## This Talk
+
+[github.com/swashcap/flutter-experiments](https://github.com/swashcap/flutter-experiments)
+
+(Includes demo and this [slideshow](https://github.com/swashcap/flutter-experiments/tree/master/slides).)
