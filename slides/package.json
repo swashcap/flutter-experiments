@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "cleaver slides.md"
+    "build": "cleaver slides.md",
+    "start": "cleaver watch slides.md"
   },
   "repository": {
     "type": "git",
