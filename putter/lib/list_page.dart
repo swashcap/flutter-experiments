@@ -16,11 +16,17 @@ class ListPage extends StatefulWidget {
 class _ListPageState extends State<ListPage> {
   int count = 0;
 
+  incrementCount() {
+    setState(() {
+      count = count + 1;
+    });
+  }
+
   void navigateToDetails(BuildContext context, Putter item) {
     Navigator.push(
       context,
       new MaterialPageRoute(
-        builder: (ctx) => DetailsPage(item: item)
+        builder: (ctx) => DetailsPage(item: item, onAdd: incrementCount)
       )
     );
   }

@@ -5,8 +5,9 @@ import './putter.dart';
 
 class DetailsPage extends StatelessWidget {
   final Putter item;
+  final Function onAdd;
 
-  DetailsPage({ @required this.item });
+  DetailsPage({ @required this.item, @required this.onAdd });
 
   navigateToList(BuildContext context) {
     Navigator.pop(context);
@@ -67,9 +68,7 @@ class DetailsPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {
-          print('Pressed!');
-        },
+        onPressed: this.onAdd,
         tooltip: 'Add',
       ),
     );
