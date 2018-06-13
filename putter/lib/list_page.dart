@@ -4,10 +4,17 @@ import './details_page.dart';
 import './item_widget.dart';
 import './putter.dart';
 
-class ListPage extends StatelessWidget {
+class ListPage extends StatefulWidget {
+  ListPage({ Key key, @required this.items }) : super(key:key);
+
   final List<Putter> items;
 
-  ListPage({ @required this.items });
+  @override
+  _ListPageState createState() => _ListPageState();
+}
+
+class _ListPageState extends State<ListPage> {
+  int count = 0;
 
   void navigateToDetails(BuildContext context, Putter item) {
     Navigator.push(
@@ -35,7 +42,7 @@ class ListPage extends StatelessWidget {
                     Icon(Icons.shopping_cart),
                     SizedBox(width: 10.0),
                     Text(
-                      '0',
+                      '$count',
                       style: TextStyle(fontWeight: FontWeight.bold)
                     ),
                   ]
@@ -50,22 +57,22 @@ class ListPage extends StatelessWidget {
           var children = [
             Expanded(
               child:  ItemWidget(
-                item: items[i],
+                item: this.widget.items[i],
                 onTap: () => this.navigateToDetails(
                   context,
-                  items[i],
+                  this.widget.items[i],
                 ),
               ),
             ),
           ];
 
-          if (i + 1 <= items.length - 1) {
+          if (i + 1 <= this.widget.items.length - 1) {
             children.add(Expanded(
               child: ItemWidget(
-                item: items[i + 1],
+                item: this.widget.items[i + 1],
                 onTap: () => this.navigateToDetails(
                   context,
-                  items[i + 1]
+                  this.widget.items[i + 1]
                 ),
               )
             ));
@@ -76,7 +83,7 @@ class ListPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
           );
         },
-        itemCount: (items.length / 2).ceil(),
+        itemCount: (this.widget.items.length / 2).ceil(),
       )
     );
   }
